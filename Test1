@@ -1,0 +1,49 @@
+
+package inlämning_betyg_sg;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Betyg {
+    public static void main(String[] args) {
+            Scanner scan = new Scanner(System.in);
+            
+                System.out.println("Skriv in dina betyg enligt nedan: ");
+                
+                System.out.println("Matematik: ");
+                int matematik = scan.nextInt();
+
+                System.out.println("Svenska: ");
+                int svenska = scan.nextInt();
+
+                System.out.println("Engelska: ");
+                int engelska = scan.nextInt();
+
+                System.out.println("Historia: ");
+                int historia = scan.nextInt();
+
+                System.out.println("Fysik: ");
+                int fysik = scan.nextInt();
+                
+                
+                System.out.println("Matematik: " + matematik);
+                System.out.println("Svenska: " + svenska);
+                System.out.println("Engelska: " + engelska);
+                System.out.println("Historia: " + historia);
+                System.out.println("Fysik: " + fysik);
+                System.out.println("Svenska: " + svenska);
+       
+           
+       int poäng;
+       poäng = ämnen
+       
+       
+        public static int läsPoäng(int poäng) {
+            private Arraylist<Poäng> poängLista = new Arraylist<>();
+            
+            
+       
+           }   
+
+    }
+    
+}
