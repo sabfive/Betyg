@@ -1,49 +1,56 @@
 
-package inlämning_betyg_sg;
-import java.util.Scanner;
-import java.util.ArrayList;
+package betyg;
+
+import javax.swing.JOptionPane;
 
 public class Betyg {
-    public static void main(String[] args) {
-            Scanner scan = new Scanner(System.in);
-            
-                System.out.println("Skriv in dina betyg enligt nedan: ");
-                
-                System.out.println("Matematik: ");
-                int matematik = scan.nextInt();
 
-                System.out.println("Svenska: ");
-                int svenska = scan.nextInt();
+  private String[] subjects = { "Matematik", "Svenska", "Engelska", "Historia", "Fysik"}; 
+    private String[] poäng = new String[subjects.length]; 
 
-                System.out.println("Engelska: ");
-                int engelska = scan.nextInt();
+    public void läsPoäng() { 
+        for(int i = 0 ; i < poäng.length ; i++) { 
+            poäng[i] = JOptionPane.showInputDialog("Ange poäng för " + subjects[i]); 
+        } 
+    } 
+        public void betyg() { 
+        int betygF = 0; 
+        int betygE = 0; 
+        int betygD = 0; 
+        int betygC = 0; 
+        int betygB = 0; 
+        int betygA = 0;  
+        for(int i = 0 ; i < poäng.length ; i++) { 
+            if(poäng[i] == "F") { 
+                betygF++; 
+            }else if(poäng[i] == "E") { 
+                betygE++; 
+            }else if(poäng[i] == "D") { 
+                betygD++; 
+            }else if(poäng[i] == "C") { 
+                betygC++; 
+            }else if(poäng[i] == "B") { 
+                betygB++; 
+            }else { 
+                betygA++; 
+            } 
+        } 
+       int skrivUtBetyg = ((betygF <= 0) + (betygE => 10) + (betygD => 20) + (betygC => 40) + (betygB => 60) + (betygA => 80));
+  
+          JOptionPane.showMessageDialog(null, "Betyg:\n" 
+                + "F: " + betygF + "\n" 
+                + "E: " + betygE + "\n" 
+                + "D: " + betygD + "\n" 
+                + "C: " + betygC + "\n" 
+                + "B: " + betygB + "\n" 
+                + "A: " + betygA + "\n");
+      } 
 
-                System.out.println("Historia: ");
-                int historia = scan.nextInt();
 
-                System.out.println("Fysik: ");
-                int fysik = scan.nextInt();
-                
-                
-                System.out.println("Matematik: " + matematik);
-                System.out.println("Svenska: " + svenska);
-                System.out.println("Engelska: " + engelska);
-                System.out.println("Historia: " + historia);
-                System.out.println("Fysik: " + fysik);
-                System.out.println("Svenska: " + svenska);
-       
-           
-       int poäng;
-       poäng = ämnen
-       
-       
-        public static int läsPoäng(int poäng) {
-            private Arraylist<Poäng> poängLista = new Arraylist<>();
-            
-            
-       
-           }   
-
-    }
-    
+        public static void main(String[] args) { 
+        Betyg prog = new Betyg(); 
+        prog.läsPoäng(); 
+        prog.betyg();
+        prog.skrivUtBetyg();
+    }  
 }
